@@ -1,1 +1,3 @@
 # simple-face-recognition
+
+Simple face recognition application is developted by using Python & Eel UI library...
