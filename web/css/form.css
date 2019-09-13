@@ -1,0 +1,158 @@
+.modal-open {
+  overflow-y:scroll;
+}
+
+.modal-header {
+  padding: 10px;
+  border-bottom: 20px;
+}
+
+.modal-dialog {
+  margin-left: 18.6%;
+  margin-right: 18.6%;
+  width: 62.6%;
+}
+
+.modal-header img {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -60px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #ddd;
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.panel h2{ color:#444444; font-size:20px; margin:0 0 8px 0;}
+.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
+.form .form-control{
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  height: 32px;
+}
+ #secilenip,#mySelect{
+   background: #f7f7f7 none repeat scroll 0 0;
+   border: 1px solid #d4d4d4;
+   border-radius: 4px;
+   height: 39px;
+   width: 87%;
+   padding: 6px 12px;
+   font-size: 14px;
+   color: #555;
+ }
+
+ #secilenip::placeholder {
+   color: #999698;
+}
+
+.main-div {
+    margin: 10px auto 0px;
+    max-width: 80%;
+    padding: 10px 10px 0px 10px;
+}
+
+.form .form-group {
+  margin-bottom:7px;
+}
+.form{ text-align:center;}
+
+.modal-footer {
+  margin-left: 60px;
+  padding-left: 0px;
+  margin-right: 60px;
+  padding-right: 0px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer  .btn.btn-primary {
+  background: #f0ad4e none repeat scroll 0 0;
+  border-color: #f0ad4e;
+  width: 100%;
+  height: 39px;
+  padding: 0;
+  margin-bottom: 15px;
+
+}
+
+.notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+}
+
+.notice-alert {
+    border-color: #ffba00;
+    color: #444444;
+    text-align: left;
+    font-size: 14px;
+}
+
+
+.clickable{
+    cursor: pointer;
+}
+
+.panel-heading div {
+		margin-top: -18px;
+		font-size: 15px;
+}
+.panel-heading div span{
+	 margin-left:5px;
+}
+
+#form-group-text{
+  padding-right: 0px;
+  width:21%;
+  height:6%;
+  padding-top: 5px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  font-size: 12px;
+  font-family: verdana;
+}
+table {
+  background-color: #e5e5e5;
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+}
+
+.text-center{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#cam_list,#kamera_listesi_yaz{
+  width: 82%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#_1{
+  background-color: #eee;
+  height: 60%;
+}
+#loading {
+  position: absolute;
+  top: 18%;
+  left: 25%;
+}
+#loading_izleme {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}

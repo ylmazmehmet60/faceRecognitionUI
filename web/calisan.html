@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Yüz Tanıma V8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="/eel.js"></script>
+		<script src="js/jquery.min.js"></script>
+
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="js/bootstrap/bootstrap.min.css" id="bootstrap-css">
+
+		<link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/sidebar.css"/>
+    <link rel="stylesheet" href="css/form.css"/>
+
+		<link rel="stylesheet" href="js/toaster/toastr.css"></script>
+		<script src="js/toaster/toastr.min.js"></script>
+		<script src="js/toaster/toastr_option.js"></script>
+
+
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+	</head>
+  <body>
+	   <div id="particles-js"></div>
+     <div class="container-fluid" style="padding-left: 0px;">
+      <div class="row" >
+        <div class="col-lg-2" style="padding-right: 0px;">
+          <div class="nav-side-menu">
+                <a href="/main_page.html"><div class="brand">Kontrol Paneli</div></a>
+                <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+                    <div class="menu-list">
+                        <ul id="menu-content" class="menu-content collapse out">
+                            <li data-toggle="collapse" data-target="#new" class="collapsed">
+                              <a href="#"><i class="fa fa fa-folder-open-o fa-lg"></i> Dosya <span class="arrow"></span></a>
+                            </li>
+                            <ul class="sub-menu collapse" id="new">
+                              <li><a href="kamera_ekrani.html">Kameralar</a></li>
+                              <li><a href="calisan.html">Çalışanlar</a></li>
+                              <li><a href="ziyaretci.html">Ziyaretçiler</a></li>
+                              <li><a href="izleme.html">İzleme Ekranı</a></li>
+                              <li><a href="rapor.html">Raporlama</li>
+                            </ul>
+                             <li>
+                              <a href="sistemi_baslat.html"><i class="fa fa-gear fa-lg"></i> Sistemi Başlat</a>
+                              </li>
+                             <li>
+                              <a href="/hakkinda.html"><i class="fa fa-info-circle fa-lg"></i> Hakkında</a>
+                            </li>
+                        </ul>
+                 </div>
+              </div>
+        </div>
+        <div class="col-lg-10" style="padding-right: 0px;">
+          <div class="col-lg-1" style="width: 40px;"></div>
+          <div class="col-lg-11" id="dis_cerceve">
+            <h1 class="text-center section-title">Çalışan Ekranı</h1>
+            <div class="modal-dialog" role="document">
+              <div class="modal-content" style="background-color: #f5f5f5;">
+                <div class="modal-header">
+                  <img src="img/user.jpg" class="img-responsive"  style="padding: 2px;">
+                </div>
+                <form>
+                  <div class="main-div">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" id="form-group-text"><i class="fa fa-user-circle-o"></i>   Ad</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="ad" placeholder="Fatih">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" id="form-group-text"><i class="fa fa-key"></i>   Soyad</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="soyad" placeholder="Kaya">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" id="form-group-text"><i class="fa fa-server"></i>   Birimi</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="birim" placeholder="Güvenlik">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" id="form-group-text"><i class="fa fa-video-camera"></i>   Kamera Seç</label>
+                      <div class="col-sm-9">
+                        <input type="text" list="kamera_listesi" id="cam_list" placeholder="Kamera Seç"/>
+                        <datalist id="kamera_listesi"></datalist>
+                        <button type="button" onclick="kamerayi_listboxa_ekle('cam_list')" class="btn btn-success">Ekle</button>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" id="form-group-text"><i class="fa fa-code-fork"></i>   Kameralar</label>
+                      <div class="col-sm-9">
+                        <select id="kamera_listesi_yaz" style="height:15%;" size="20"></select>
+                        <button type="button" onclick="kamera_listesi_sil()" class="btn btn-danger" style="padding-right: 18px;padding-left: 18px;margin-bottom: 20px;">Sil</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="modal-footer">
+                  <div class="col-lg-12">
+                    <div class="col-lg-4">
+                      <button type="button" class="btn btn-success btn-block" id="yeni_calisan_ekle">Ekle</button>
+                    </div>
+                    <div class="col-lg-4">
+                      <button type="button" class="btn btn-danger btn-block" id="secilmis_bul">Sil</button>
+                    </div>
+                    <div class="col-lg-4">
+                      <button type="button" class="btn btn-info btn-block" id="calisan_guncelle">Güncelle</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="text-center">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Ad</th>
+                          <th>Soyad</th>
+                          <th>Birim</th>
+                          <th>Kameralar</th>
+                        </tr>
+                      </thead>
+                      <tbody id="add_new_row">
+                        <tr>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  <script src="js/calisan.js"></script>
+	<script src="js/particles/particles.js"></script>
+	<script src="js/particles/app.js"></script>
+  </body>
+<html>
