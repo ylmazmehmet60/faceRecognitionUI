@@ -6,9 +6,9 @@ Simple face recognition application is developted by using Python & Eel UI libra
 https://drive.google.com/open?id=1aUxxJkUceAUZYwxWU4sV244o-FUsMZTY
 
 ### Introduction videos
--https://drive.google.com/open?id=18vFwo4V6OsUTSgwaH_f2GzSlr1QTmo8I
--https://drive.google.com/open?id=1VNYktk0ihVTfNcT_PLEqDSeFMU7KQNoe
--https://drive.google.com/open?id=1jJI7g4g4n8m2mzUL912nwa9oaf43THdQ
+- https://drive.google.com/open?id=18vFwo4V6OsUTSgwaH_f2GzSlr1QTmo8I
+- https://drive.google.com/open?id=1VNYktk0ihVTfNcT_PLEqDSeFMU7KQNoe
+- https://drive.google.com/open?id=1jJI7g4g4n8m2mzUL912nwa9oaf43THdQ
 
 
 https://www.python.org/ftp/python/3.6.0/python-3.6.0-amd64.exe  download and install python
